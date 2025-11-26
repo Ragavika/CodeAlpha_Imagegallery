@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Photography Gallery</h1>
+
+    <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="city">City</button>
+        <button class="filter-btn" data-filter="abstract">Abstract</button>
+    </div>
+
+    <div class="gallery-container">
+        <img src="image1.jpg" alt="Nature Scene" class="gallery-item nature" data-index="0">
+        <img src="image2.jpg" alt="City Skyline" class="gallery-item city" data-index="1">
+        <img src="image3.jpg" alt="Abstract Art" class="gallery-item abstract" data-index="2">
+        <img src="image4.jpg" alt="Another Nature Scene" class="gallery-item nature" data-index="3">
+        <img src="image5.jpg" alt="City Street" class="gallery-item city" data-index="4">
+        <img src="image6.jpg" alt="Colorful Abstract" class="gallery-item abstract" data-index="5">
+        <img src="image7.jpg" alt="Colorful Abstract" class="gallery-item abstract" data-index="6">
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-content">
+            <span class="close-btn">&times;</span>
+            <img id="lightbox-img" src="" alt="Full View">
+            <button id="prev-btn" class="nav-btn prev">❮</button>
+            <button id="next-btn" class="nav-btn next">❯</button>
+            <div id="lightbox-caption" class="caption"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
